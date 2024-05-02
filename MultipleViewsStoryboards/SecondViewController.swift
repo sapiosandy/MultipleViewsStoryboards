@@ -7,24 +7,38 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+protocol MyProtocol {
+    func sendBackDataAgain(thisData: String)
+}
 
-    @IBOutlet var myTextField: UIView!
+class SecondViewController: UIViewController, MySecondProtocol {
+    
+    @IBOutlet var myTextField: UITextField!
+    var receivedData = ""
+    var gotData = ""
+    var delegate: MyProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if gotData == "" {
+            myTextField.text = receivedData
+        } else {
+            myTextField.text = gotData
+        }
+    }
+    func sendBackData(thisData: String) {
+        self.gotData = thisData
+        myTextField.text = gotData
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.sendBackDataAgain(thisData: myTextField.text ?? "Default")
     }
-    */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let thirdVC = segue.destination as? ThirdViewController {
+            thirdVC.receivedData = myTextField.text ?? "Default text"
+            thirdVC.delegate = self
+        }
+    }
 }

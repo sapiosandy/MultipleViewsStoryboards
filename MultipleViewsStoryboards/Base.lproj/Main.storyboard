@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultipleViewsStoryboards" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-9E-NPm">
-                                <rect key="frame" x="148" y="288" width="97" height="34"/>
+                                <rect key="frame" x="60" y="288" width="252" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-j5-99O">
-                                <rect key="frame" x="238" y="141" width="75" height="35"/>
+                                <rect key="frame" x="289" y="82" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -35,7 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jcg-15-Znf"/>
+                    <navigationItem key="navigationItem" title="First View" id="Jcg-15-Znf">
+                        <barButtonItem key="backBarButtonItem" title="Main View" id="KlL-CH-k2d"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTextField" destination="ttA-9E-NPm" id="qUe-8w-NQr"/>
                     </connections>
@@ -44,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Second View-->
         <scene sceneID="ocP-MQ-lW1">
             <objects>
                 <viewController id="bR0-e3-6fi" customClass="SecondViewController" customModule="MultipleViewsStoryboards" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,13 +55,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikp-F2-n2c">
-                                <rect key="frame" x="148" y="282" width="97" height="34"/>
+                                <rect key="frame" x="90" y="282" width="220" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-BG-DHL">
-                                <rect key="frame" x="279" y="133" width="75" height="35"/>
+                                <rect key="frame" x="281" y="90" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -71,16 +73,18 @@
                         <viewLayoutGuide key="safeArea" id="ydu-ia-hUj"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LlJ-jx-anN"/>
+                    <navigationItem key="navigationItem" title="Second View" id="LlJ-jx-anN">
+                        <barButtonItem key="backBarButtonItem" title="Second View" id="4qa-6f-M7K"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="myTextField" destination="t27-Uh-QBH" id="TAB-S5-xME"/>
+                        <outlet property="myTextField" destination="ikp-F2-n2c" id="51K-cP-4Ae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAv-AA-Sks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="10"/>
+            <point key="canvasLocation" x="1733.5877862595419" y="9.8591549295774659"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Third View-->
         <scene sceneID="k7V-hi-KIQ">
             <objects>
                 <viewController id="4dh-El-gbH" customClass="ThirdViewController" customModule="MultipleViewsStoryboards" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-2M-dN2">
-                                <rect key="frame" x="148" y="275" width="97" height="34"/>
+                                <rect key="frame" x="83" y="275" width="213" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -98,14 +102,14 @@
                         <viewLayoutGuide key="safeArea" id="n6T-FU-CfR"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k3A-hI-8Z0"/>
+                    <navigationItem key="navigationItem" title="Third View" id="k3A-hI-8Z0"/>
                     <connections>
                         <outlet property="myTextField" destination="JDa-2M-dN2" id="Ida-qA-MsB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rA0-Zt-xXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2401" y="10"/>
+            <point key="canvasLocation" x="2400.7633587786258" y="9.8591549295774659"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Vo-7h-kDL">
